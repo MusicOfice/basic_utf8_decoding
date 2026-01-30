@@ -69,9 +69,9 @@ But because of with test.errChange(USINGERROR, FILEERROR) we silinced both use a
 
 ## Error messages
 Class can write some errors to stderr. This error fall under 4 cathagory
-+USINGERROR,	// using class wrongly like setOutput(BOTH)
-+FILEERROR,		// file couldnt found or opened
-+INTERNALERROR,	// if library itself make a mistake
-+UNDEFINEDDATA	// data couldnt identified
++ USINGERROR	// using class wrongly like setOutput(BOTH)
++ FILEERROR		// file couldnt found or opened
++ INTERNALERROR	// if library itself make a mistake
++ UNDEFINEDDATA	// data couldnt identified
 
 this errors can be shutdown with using test.errChange(enum1,enum2...) // can be entered any amout of only accept enums written above
