@@ -13,13 +13,15 @@ utf8read test;
 
 There are few function can get called.
 
-  1-**std::string stringIn(std::string)**
+
+1-**std::string stringIn(std::string)**
     Takes a std::string as input and returns a std::string. Assumes input string in utf8.
     
 ```cpp
 test..stringIn("a∎ text with❼ random ⟕ unicode characters ⚅");
 ```
 this function will return "a U+220E  text with U+277C  random  U+27D5  unicode characters  U+2685".
+
 
 2-**std::string fileIn(std::string filePath)**
 Tries to open and read file that given path. Assumes file in utf8.
@@ -30,6 +32,7 @@ test.fileIn("Example/path);
 	
 if file have "☿ asl 𐍈 afa " function will return " U+263F  asl  U+10348  afa" as result.
 
+
 3-**void removeUnicode(bool)**
 If set true utf8read class will ignore unicode data.
 	
@@ -39,6 +42,7 @@ test.stringIn("a∎ text with❼ random ⟕ unicode characters ⚅");
 ```
 	
 this code will return "a text with random  unicode characters".
+
 
 4-**void errChange(Args... args)**
 Change error writing of the error types. Can accept USINGERROR. FILEERROR, INTERNALERROR and UNDEFINEDDATA. For more information look [Link Text](#error-messages)
