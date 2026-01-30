@@ -50,7 +50,7 @@ this code will return "a text with random  unicode characters".
 
 4- **void errChange(Args... args)**
 
-Change error writing of the error types. Can accept USINGERROR. FILEERROR, INTERNALERROR and UNDEFINEDDATA. For more information look [Link Text](#error-messages)
+Change error writing of the error types. Can accept USINGERROR. FILEERROR, INTERNALERROR and UNDEFINEDDATA. For more information look [Error messages](#error-messages)
     
 ```cpp
 test.errChange(USINGERROR, FILEERROR);
@@ -59,7 +59,7 @@ test.fileIn("nonExistinsgFile");
  ```
 wthout errChange() fumction this program will throw "Using error unicode:You can't use setOutput(enum) for BOTH or OUTFILE, use setOutput(enum, string) to set an output file"
 and "File error unicode: Couldn't opened file: nonExistinsgFile" errors. 
-But because of with test.errChange(USINGERROR, FILEERROR) we silinced both use and file errors([Link Text](#error-messages)) program couldn't throw any error. 
+But because of with test.errChange(USINGERROR, FILEERROR) we silinced both use and file errors([Error messages](#error-messages)) program couldn't throw any error. 
 
 ## Basic use example
 ```cpp
