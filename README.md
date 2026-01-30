@@ -7,7 +7,7 @@ This project only contains a header and C++ file download files and add it to yo
 # How to use
 Header file includes one class. All functions get used with this class.
   **Creating class**
-  ```C++
+  ```cpp
     utf8read test;
   ```
 
@@ -16,7 +16,7 @@ There are few function can get called.
   1-**std::string stringIn(std::string)**
     Takes a std::string as input and returns a std::string. Assumes input string in utf8.
     
-    ```C++
+    ```cpp
       test..stringIn("a∎ text with❼ random ⟕ unicode characters ⚅");
     ```
     this function will return "a U+220E  text with U+277C  random  U+27D5  unicode characters  U+2685".
@@ -24,14 +24,14 @@ There are few function can get called.
   2-**std::string fileIn(std::string filePath)**
     Tries to open and read file that given path. Assumes file in utf8.
 
-    ```C++
+    ```cpp
       test.fileIn("Example/path);
     ```
     if file have "☿ asl 𐍈 afa " function will return " U+263F  asl  U+10348  afa" as result.
 
     3-**void removeUnicode(bool)**
     If set true utf8read class will ignore unicode data.
-    ```C++
+    ```cpp
       test.removeUnicode(true);
       test.stringIn("a∎ text with❼ random ⟕ unicode characters ⚅");
     ```
@@ -40,7 +40,7 @@ There are few function can get called.
     4-**void errChange(Args... args)**
     Change error writing of the error types. Can accept USINGERROR. FILEERROR, INTERNALERROR and UNDEFINEDDATA. For more information look [Link Text](#error-messages)
     
-    ```C++
+    ```cpp
       test.errChange(USINGERROR, FILEERROR);
       test.setOutput(BOTH);
 	    test.fileIn("nonExistinsgFile");
@@ -50,7 +50,7 @@ There are few function can get called.
     But because of with test.errChange(USINGERROR, FILEERROR) we silinced both use and file errors([Link Text](#error-messages)) program couldn't throw any error. 
 
   ## Basic use example
-  ```C++
+  ```cpp
     int main(){
         utf8read test;  // create class
         std::cout << test.fileIn("files/testFile") << std::endl;  // read "files/tesFile" and write it to another file
