@@ -1,5 +1,5 @@
 # basic_utf8_decoding
-Reads a UTF8 encoding file or C++ string and turns unicode characters to" U+ Hexvalue" 
+Reads a UTF8 encoding file or C++ string and removes unicode characters or turns unicode characters to "U+ Hexvalue" 
 
 # How to download
 This project only contains a header and C++ file download files and add it to your project
